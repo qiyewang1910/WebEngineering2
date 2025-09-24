@@ -1,4 +1,4 @@
-image: registry.bht-berlin.de:443/templates/container/we2:ss25
+image: registry.bht-berlin.de:443/templates/container/we:WS25b
 
 stages:
   - test
