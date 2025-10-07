@@ -1,4 +1,4 @@
-image: registry.bht-berlin.de:443/templates/container/we:WS25b
+image: registry.bht-berlin.de:443/templates/container/we:WS25c
 
 stages:
   - test
@@ -6,8 +6,8 @@ stages:
 javascript:
   stage: test
   variables:
-    # BHT's Gitlab CI only supports MongoDB up to 7.0.3
-    MONGOMS_VERSION: "7.0.3"
+    # BHT's Gitlab CI only supports MongoDB up to 7.0.18 (maybe other 17.0.x as well)
+    MONGOMS_VERSION: "7.0.18"
     NODE_OPTIONS: "--max-old-space-size=4096"
   script:
     # ci is like install, but faster (and we need a synchronized package-lock.json)

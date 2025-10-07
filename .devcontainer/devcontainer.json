@@ -2,7 +2,7 @@
 // README at: https://github.com/devcontainers/templates/tree/main/src/typescript-node
 {
 	// Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
-	"image": "registry.bht-berlin.de:443/templates/container/we:WS25b",
+	"image": "registry.bht-berlin.de:443/templates/container/we:WS25c",
 	
 	// Features to add to the dev container. More info: https://containers.dev/features.
 	// "features": {},
@@ -33,7 +33,37 @@
 				"streetsidesoftware.code-spell-checker-german",
 				"usernamehw.errorlens",
 				"vitest.explorer"
-			]
+			],
+			"settings": {
+				"chat.disableAIFeatures": true,
+				"chat.agent.enabled": false,
+				"chat.commandCenter.enabled": false,
+				"inlineChat.accessibleDiffView": "off",
+				"github.copilot.enable": { "*":false },
+				"cSpell.caseSensitive": false,
+				"cSpell.diagnosticLevel": "Hint",
+				"cSpell.language": "de-de,en",
+				"cSpell.languageSettings": [
+					{
+						"caseSensitive": false,
+						"languageId": "*",
+						"locale": "de,en"
+					}
+				],
+				"cSpell.ignoreRegExpList": [
+					"/\\\\[a-zA-Z]+\\b/g",
+					"/\\\\@[a-zA-Z]+\\b/g"
+				],
+				"dev.containers.defaultExtensions": [],
+				"workbench.tree.indent": 16,
+				"files.exclude": {
+					"**/.devcontainer": true,
+					"**/.git": true,
+					"**/.DS_Store": true,
+					"**/.DS Store": true
+				}
+			}
 		}
 	}
+	,"initializeCommand": "rm -rf /home/dev/.vscode-server/extensions/github.copilot* && clear && clear"
 }
